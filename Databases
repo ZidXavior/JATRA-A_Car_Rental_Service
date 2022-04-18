@@ -1,0 +1,91 @@
+CREATE TABLE bus(
+Number_plat VARCHAR(20) PRIMARY KEY,
+    Seat int,
+    Price int
+);
+
+
+CREATE TABLE CAR(
+Number_PLate varchar(20) PRIMARY key,
+    Model int,
+    Colour varchar(20),
+    Price int
+
+);
+
+
+
+CREATE TABLE TRUCK(
+ 
+ Number_Plate varchar(20) PRIMARY KEY,
+     Size int,
+     Price int
+ 
+ );
+
+
+
+CREATE TABLE MICROBUS(
+Number_Plate Varchar(20) PRIMARY KEY,
+    Model int,
+    Seat int,
+    Price int
+    
+
+);
+
+
+CREATE TABLE LOCATION(
+District varchar(20),
+    Sub_District varchar(20)
+);
+
+
+CREATE TABLE ADMIN(
+Id int PRIMARY KEY,
+    Name varchar(20),
+    Email varchar(20)
+    
+);
+
+
+CREATE TABLE ODERLIST(
+Oder_Id int PRIMARY KEY,
+    Name Varchar(20),
+    Model int,
+    Distance float,
+    Amount float,
+    Available varchar(20)
+);
+
+
+CREATE TABLE ADMIN(
+Id int PRIMARY KEY,
+    Name varchar(20),
+    Email varchar(20),
+    Order_ID int,
+    CONSTRAINT FK_ORDERLIST FOREIGN KEY(Order_Id) REFERENCES oderlist(Oder_Id)
+    
+);
+
+
+CREATE TABLE COUSTOMER(
+C_Id int PRIMARY KEY,
+    Name varchar(20),
+    Phone_No int,
+    Adress varchar(20),
+    Email varchar(20),
+    Reason varchar(20),
+    R_Id int,
+    CONSTRAINT FK_Review FOREIGN KEY(R_Id) REFERENCES review(R_ID)
+    
+    
+)
+
+
+
+CREATE TABLE Review( 
+R_ID int, 
+ Name varchar(20),
+ Comments Varchar(30) );
+
