@@ -1,0 +1,132 @@
+
+<!doctype html>
+<html>
+    <head>
+        <style>
+            a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 50px 200px;
+  font-size:50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+        </style>
+        <body>
+        
+            <a href="admin1.php">insert car</a>
+            <br>
+            <br>
+            <a href="admin1show.php">show car</a>
+            
+          
+            </body>
+    </head>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 30px 80px;
+  font-size:50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}</style>
+<body>
+<a href='car.php'>car</a>
+    <a href='microbus.php'>microbus</a>
+<a href='bus.php'>bus</a>
+    <a href='truck.php'>truck</a>
+    <br>
+    <br>
+</body>
+</html>
+<?php
+session_start();
+if (isset($_SESSION['Name'])){
+$Name = $_SESSION['Name'];
+
+echo "<a href='logout.php'>Logout</a>";
+}
+?>
+<!doctype html>
+<html>
+    <head>
+        <style>
+            a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 50px 200px;
+  font-size:50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+        </style>
+        <body>
+            <a href="microbusi.php">insert microbus</a>
+            <br>
+            <br>
+            <a href="microbuss.php">show microbus</a>
+          
+            </body>
+    </head>
+</html>
+
+<!doctype html>
+<html>
+    <head>
+        <style>
+            a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 50px 200px;
+  font-size:50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+        </style>
+        <body>
+            <a href="trucki.php">insert truck</a>
+            <br>
+            <br>
+            <a href="trucks.php">show truck</a>
+          
+            </body>
+    </head>
+</html>
+
+<!doctype html>
+<html>
+    <head>
+        <style>
+            a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 50px 200px;
+  font-size:50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+        </style>
+        <body>
+            <a href="busi.php">insert bus</a>
+            <br>
+            <br>
+            <a href="buss.php">show bus</a>
+          
+            </body>
+    </head>
+</html>
