@@ -1,0 +1,614 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: May 22, 2022 at 11:09 AM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 7.4.27
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `jatra`
+--
+CREATE DATABASE IF NOT EXISTS `jatra` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `jatra`;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `Id` int(11) NOT NULL,
+  `Name` varchar(20) DEFAULT NULL,
+  `Email` varchar(20) DEFAULT NULL,
+  `password` varchar(64) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`Id`, `Name`, `Email`, `password`) VALUES
+(1, 'admin', 'admin@gmail.com', '202cb962ac59075b964b07152d234b70');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bus`
+--
+
+CREATE TABLE `bus` (
+  `Number_plat` varchar(20) NOT NULL,
+  `Seat` int(11) DEFAULT NULL,
+  `Price` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `bus`
+--
+
+INSERT INTO `bus` (`Number_plat`, `Seat`, `Price`) VALUES
+('dhaka-metro-ca-11-11', 70, 20000),
+('dhaka-metro-ca-12-11', 40, 12000),
+('dhaka-metro-ca-13-11', 40, 12000),
+('dhaka-metro-ca-14-11', 16, 7000),
+('dhaka-metro-ca-15-11', 30, 10000);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `car`
+--
+
+CREATE TABLE `car` (
+  `Number_PLate` varchar(20) NOT NULL,
+  `Model` varchar(20) DEFAULT NULL,
+  `Colour` varchar(20) DEFAULT NULL,
+  `Price` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `car`
+--
+
+INSERT INTO `car` (`Number_PLate`, `Model`, `Colour`, `Price`) VALUES
+('dhaka-metro-ga-11-11', 'Toyota Premeo', 'black', 4000),
+('dhaka-metro-ga-11-12', 'Toyota Axio', 'white', 3500),
+('dhaka-metro-ga-11-13', 'Toyota Axio', 'sky', 3500),
+('dhaka-metro-ga-11-14', 'Toyota Axio', 'silver', 3500),
+('dhaka-metro-ga-11-15', 'Honda Civic', 'blue', 4500),
+('dhaka-metro-ga-11-16', 'Toyota Axio', 'red', 3500),
+('dhaka-metro-ga-11-17', 'Toyota Axio', 'black', 3500),
+('dhaka-metro-ga-11-18', 'Toyota Premeo', 'royal blue', 4000),
+('dhaka-metro-ga-11-21', 'Honda Civic', 'yellow', 4500),
+('dhaka-metro-ga-11-31', 'Toyota Premeo', 'black', 4000),
+('dhaka-metro-ga-11-41', 'Toyota Premeo', 'black', 4000),
+('dhaka-metro-ga-11-51', 'Toyota Premeo', 'sky', 4000),
+('dhaka-metro-ga-11-61', 'Toyota Premeo', 'white', 4000),
+('dhaka-metro-ga-12-11', 'Toyota Axio', 'red', 3500),
+('dhaka-metro-ga-12-21', 'Toyota Axio', 'silver', 3500),
+('dhaka-metro-ga-13-11', 'Toyota Premeo', 'white', 4000),
+('dhaka-metro-ga-14-11', 'Toyota Premeo', 'white', 4000),
+('dhaka-metro-ga-15-11', 'Honda ', 'white', 2000),
+('dhaka-metro-ga-16-11', 'Honda Civic', 'white', 4500),
+('dhaka-metro-ga-17-11', 'Honda Civic', 'orange', 4500),
+('dhaka-metro-ga-18-11', 'Honda Civic', 'grey', 4500);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `customer_details_b`
+--
+
+CREATE TABLE `customer_details_b` (
+  `name` varchar(20) DEFAULT NULL,
+  `email` varchar(20) DEFAULT NULL,
+  `contactno` int(11) DEFAULT NULL,
+  `pickup_address` varchar(20) DEFAULT NULL,
+  `pickup_date` varchar(20) DEFAULT NULL,
+  `price` int(11) DEFAULT NULL,
+  `reason` varchar(20) DEFAULT NULL,
+  `location` varchar(20) DEFAULT NULL,
+  `Number_plat` varchar(20) DEFAULT NULL,
+  `pickup_time` varchar(20) DEFAULT NULL,
+  `days` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `customer_details_b`
+--
+
+INSERT INTO `customer_details_b` (`name`, `email`, `contactno`, `pickup_address`, `pickup_date`, `price`, `reason`, `location`, `Number_plat`, `pickup_time`, `days`) VALUES
+('jalal', 'jalal@gmail.com', 216489948, 'baridhara', '15-5-22', 12000, 'rg ert etr etetrrt e', 'Bandarban', 'dhaka-metro-ca-12-11', '10.45 pm', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `customer_details_c`
+--
+
+CREATE TABLE `customer_details_c` (
+  `name` varchar(20) DEFAULT NULL,
+  `email` varchar(20) DEFAULT NULL,
+  `contactno` int(11) DEFAULT NULL,
+  `pickup_address` varchar(20) DEFAULT NULL,
+  `pickup_date` varchar(20) DEFAULT NULL,
+  `pickup_time` varchar(20) DEFAULT NULL,
+  `days` int(11) DEFAULT NULL,
+  `price` int(11) DEFAULT NULL,
+  `reason` varchar(20) DEFAULT NULL,
+  `location` varchar(20) DEFAULT NULL,
+  `Number_PLate` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `customer_details_c`
+--
+
+INSERT INTO `customer_details_c` (`name`, `email`, `contactno`, `pickup_address`, `pickup_date`, `pickup_time`, `days`, `price`, `reason`, `location`, `Number_PLate`) VALUES
+('jalal', 'jalal@gmail.com', 216489948, 'baridhara', '15-5-22', '10.45 pm', 2, 8000, 'ksjg kjgfk dkj', 'Gopalganj', 'dhaka-metro-ga-11-11');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `customer_details_e`
+--
+
+CREATE TABLE `customer_details_e` (
+  `name` varchar(20) DEFAULT NULL,
+  `email` varchar(20) DEFAULT NULL,
+  `contactno` int(11) DEFAULT NULL,
+  `pickup_address` varchar(20) DEFAULT NULL,
+  `price` int(11) DEFAULT NULL,
+  `Number_PLate` varchar(20) DEFAULT NULL,
+  `p_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `customer_details_e`
+--
+
+INSERT INTO `customer_details_e` (`name`, `email`, `contactno`, `pickup_address`, `price`, `Number_PLate`, `p_id`) VALUES
+('jalal', 'jalal@gmail.com', 216489948, 'baridhara', 17000, 'dhaka-metro-ga-11-14', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `customer_details_m`
+--
+
+CREATE TABLE `customer_details_m` (
+  `name` varchar(20) DEFAULT NULL,
+  `email` varchar(20) DEFAULT NULL,
+  `contactno` int(11) DEFAULT NULL,
+  `pickup_address` varchar(20) DEFAULT NULL,
+  `pickup_date` varchar(20) DEFAULT NULL,
+  `price` int(11) DEFAULT NULL,
+  `reason` varchar(20) DEFAULT NULL,
+  `location` varchar(20) DEFAULT NULL,
+  `Number_Plate` varchar(20) DEFAULT NULL,
+  `pickup_time` varchar(20) DEFAULT NULL,
+  `days` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `customer_details_m`
+--
+
+INSERT INTO `customer_details_m` (`name`, `email`, `contactno`, `pickup_address`, `pickup_date`, `price`, `reason`, `location`, `Number_Plate`, `pickup_time`, `days`) VALUES
+('jalal', 'jalal@gmail.com', 216489948, 'baridhara', '17-5-22', 4500, 'fds er wer ', 'Gaibandha', 'dhaka-metro-ka-11-11', '10.45 pm', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `customer_details_t`
+--
+
+CREATE TABLE `customer_details_t` (
+  `name` varchar(20) DEFAULT NULL,
+  `email` varchar(20) DEFAULT NULL,
+  `contactno` int(11) DEFAULT NULL,
+  `pickup_address` varchar(20) DEFAULT NULL,
+  `pickup_date` varchar(20) DEFAULT NULL,
+  `price` int(11) DEFAULT NULL,
+  `reason` varchar(20) DEFAULT NULL,
+  `location` varchar(20) DEFAULT NULL,
+  `Number_Plate` varchar(20) DEFAULT NULL,
+  `pickup_time` varchar(20) DEFAULT NULL,
+  `days` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `customer_details_t`
+--
+
+INSERT INTO `customer_details_t` (`name`, `email`, `contactno`, `pickup_address`, `pickup_date`, `price`, `reason`, `location`, `Number_Plate`, `pickup_time`, `days`) VALUES
+('jalal', 'jalal@gmail.com', 216489948, '', '15-5-22', 6000, 'rtetrt', 'Barguna', 'dhaka-metro-ca-11-21', '10.45 pm', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `location`
+--
+
+CREATE TABLE `location` (
+  `District` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `location`
+--
+
+INSERT INTO `location` (`District`) VALUES
+('Bagerhat'),
+('Bandarban'),
+('Barguna'),
+('Barisal'),
+('Bhola'),
+('Brahmanbaria'),
+('Chandpur'),
+('Chittagon'),
+('Chuadanga'),
+('Comilla'),
+('Coxes Bazar'),
+('Dhaka'),
+('Dinajpur'),
+('Faridpur'),
+('Feni'),
+('Gaibandha'),
+('Gazipur'),
+('Gopalganj'),
+('Habiganj'),
+('Jamalpur'),
+('Jessore'),
+('Jhalokati'),
+('Jhenaidah'),
+('Joypurhat'),
+('Khagrachhari'),
+('Khulna'),
+('Kishoreganj'),
+('Kurigram'),
+('Kushtia'),
+('Lakshmipur'),
+('Lalmonirhat'),
+('Madaripur'),
+('Manikganj'),
+('Moulvibazar'),
+('Munshiganj'),
+('Mymensingh'),
+('Naogaon'),
+('Narail'),
+('Narayanganj'),
+('Narsingdi'),
+('Natore'),
+('Netrokona'),
+('Nilphamari'),
+('Noakhali'),
+('Pabna'),
+('Panchagarh'),
+('Patuakhali'),
+('Pirojpur'),
+('Rajbari'),
+('Rajshahi'),
+('Rangamati'),
+('Rangpur'),
+('Satkhira'),
+('Shariatpur'),
+('Sherpur'),
+('Sirajganj'),
+('Sunamganj'),
+('Sylhet'),
+('Tangail'),
+('Thakurgaon');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `microbus`
+--
+
+CREATE TABLE `microbus` (
+  `Number_Plate` varchar(20) NOT NULL,
+  `Model` varchar(20) DEFAULT NULL,
+  `Seat` int(11) DEFAULT NULL,
+  `Price` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `microbus`
+--
+
+INSERT INTO `microbus` (`Number_Plate`, `Model`, `Seat`, `Price`) VALUES
+('dhaka-metro-ka-11-11', 'Noah', 10, 4500),
+('dhaka-metro-ka-12-11', 'Noah', 10, 4500),
+('dhaka-metro-ka-13-11', 'Noah', 10, 4500),
+('dhaka-metro-ka-14-11', 'Noah', 10, 4500),
+('dhaka-metro-ka-15-11', 'Noah', 10, 4500),
+('dhaka-metro-ka-16-11', 'Noah', 10, 4500);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `package`
+--
+
+CREATE TABLE `package` (
+  `p_id` int(11) NOT NULL,
+  `hotel` varchar(20) DEFAULT NULL,
+  `rooms` varchar(20) DEFAULT NULL,
+  `price` float DEFAULT NULL,
+  `date` varchar(30) DEFAULT NULL,
+  `Pickup_time` varchar(30) DEFAULT NULL,
+  `Number_PLate` varchar(20) DEFAULT NULL,
+  `place` varchar(20) DEFAULT NULL,
+  `spot1` varchar(20) DEFAULT NULL,
+  `spot2` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `package`
+--
+
+INSERT INTO `package` (`p_id`, `hotel`, `rooms`, `price`, `date`, `Pickup_time`, `Number_PLate`, `place`, `spot1`, `spot2`) VALUES
+(1, 'sea_crown', 'single bed', 10000, '15-5-22', '10.45 pm', 'dhaka-metro-ga-11-61', 'coxes-bazar', 'Radiant fish', 'Inani Beach'),
+(2, 'sea_crown', 'single bed', 10000, '15-5-22', '10.45 pm', 'dhaka-metro-ga-11-61', 'coxes-bazar', 'Radiant fish', 'Inani Beach'),
+(3, 'sea_crown', 'single bed', 10000, '15-5-22', '10.45 pm', 'dhaka-metro-ga-11-61', 'coxes-bazar', 'Radiant fish', 'Inani Beach'),
+(4, 'sea_crown', 'single bed', 10000, '15-5-22', '10.45 pm', 'dhaka-metro-ga-11-61', 'coxes-bazar', 'Radiant fish', 'Inani Beach'),
+(5, 'sea_crown', 'single bed', 10000, '15-5-22', '10.45 pm', 'dhaka-metro-ga-11-61', 'coxes-bazar', 'Radiant fish', 'Inani Beach'),
+(6, 'sea_crown', 'single bed', 10000, '15-5-22', '10.45 pm', 'dhaka-metro-ga-11-61', 'coxes-bazar', 'Radiant fish', 'Inani Beach');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `register`
+--
+
+CREATE TABLE `register` (
+  `id` int(11) NOT NULL,
+  `email` varchar(20) DEFAULT NULL,
+  `name` varchar(20) DEFAULT NULL,
+  `contactno` int(11) DEFAULT NULL,
+  `password` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `register`
+--
+
+INSERT INTO `register` (`id`, `email`, `name`, `contactno`, `password`) VALUES
+(1, 'joy@gmail.com', 'joy', 162589465, '1111'),
+(2, 'rajib@gmail.com', 'rajib', 1611829625, '222'),
+(3, 'sobuz@gmail.com', 'sobuz', 1611829685, '333'),
+(4, 'redowan@gmail.com', 'redowan', 2147483647, '444'),
+(5, 'tanim@gmail.com', 'tanim', 1611829696, '555'),
+(6, 'faiad@gmail.com', 'Faiad', 1611829628, 'adif'),
+(8, 'zidan@gmail.com', 'zidan', 1611829623, '0'),
+(9, 'montu@gmail.com', 'montu', 2147483647, '0'),
+(10, 'sonty@gmail.com', 'sontu', 1611829528, '0'),
+(16, 'mokles@gmail.com', 'mokles', 5468, 'mokles'),
+(17, 'rami@gmail.com', 'rami', 646545, '1234'),
+(18, 'jibon@gmail.com', 'jibon', 31654246, 'jibon'),
+(25, 'jamoi@gmail.com', 'jami', 6545919, 'jami'),
+(26, 'hamim@gmail.com', 'hamim', 65189, 'hamim'),
+(27, 'jalal@gmail.com', 'jalal', 216489948, 'jalal');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `review`
+--
+
+CREATE TABLE `review` (
+  `R_ID` int(11) NOT NULL,
+  `name` varchar(20) DEFAULT NULL,
+  `email` varchar(20) DEFAULT NULL,
+  `rating` int(11) DEFAULT NULL,
+  `comment` varchar(1000) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `review`
+--
+
+INSERT INTO `review` (`R_ID`, `name`, `email`, `rating`, `comment`) VALUES
+(3, 'Faiad', 'faiad@gmail.com', 3, 'nice'),
+(8, 'tanim', 'tanim@gmail.com', 2, 'sdfds'),
+(13, 'rajib', 'rajib@gmail.com', 3, 'fsg'),
+(14, 'joy', 'joy@gmail.com', 3, 'not gd'),
+(17, 'redowan', 'redowan@gmail.com', 4, 'nice'),
+(19, 'montu', 'montu@gmail.com', 4, 'good'),
+(20, 'rami', 'rami@gmail.com', 2, 'bad'),
+(21, 'jalal', 'jalal@gmail.com', 4, 'good');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `truck`
+--
+
+CREATE TABLE `truck` (
+  `Number_Plate` varchar(20) NOT NULL,
+  `Price` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `truck`
+--
+
+INSERT INTO `truck` (`Number_Plate`, `Price`) VALUES
+('dhaka-metro-ca-11-21', 3000),
+('dhaka-metro-ca-11-31', 4500),
+('dhaka-metro-ca-11-41', 6000),
+('dhaka-metro-ca-11-51', 6000);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`Id`);
+
+--
+-- Indexes for table `bus`
+--
+ALTER TABLE `bus`
+  ADD PRIMARY KEY (`Number_plat`);
+
+--
+-- Indexes for table `car`
+--
+ALTER TABLE `car`
+  ADD PRIMARY KEY (`Number_PLate`);
+
+--
+-- Indexes for table `customer_details_b`
+--
+ALTER TABLE `customer_details_b`
+  ADD KEY `Number_plat` (`Number_plat`);
+
+--
+-- Indexes for table `customer_details_c`
+--
+ALTER TABLE `customer_details_c`
+  ADD KEY `Number_PLate` (`Number_PLate`);
+
+--
+-- Indexes for table `customer_details_e`
+--
+ALTER TABLE `customer_details_e`
+  ADD KEY `Number_PLate` (`Number_PLate`),
+  ADD KEY `p_id` (`p_id`);
+
+--
+-- Indexes for table `customer_details_m`
+--
+ALTER TABLE `customer_details_m`
+  ADD KEY `Number_Plate` (`Number_Plate`);
+
+--
+-- Indexes for table `customer_details_t`
+--
+ALTER TABLE `customer_details_t`
+  ADD KEY `Number_Plate` (`Number_Plate`);
+
+--
+-- Indexes for table `location`
+--
+ALTER TABLE `location`
+  ADD PRIMARY KEY (`District`);
+
+--
+-- Indexes for table `microbus`
+--
+ALTER TABLE `microbus`
+  ADD PRIMARY KEY (`Number_Plate`);
+
+--
+-- Indexes for table `package`
+--
+ALTER TABLE `package`
+  ADD PRIMARY KEY (`p_id`),
+  ADD KEY `Number_PLate` (`Number_PLate`);
+
+--
+-- Indexes for table `register`
+--
+ALTER TABLE `register`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `email` (`email`);
+
+--
+-- Indexes for table `review`
+--
+ALTER TABLE `review`
+  ADD PRIMARY KEY (`R_ID`),
+  ADD UNIQUE KEY `email` (`email`);
+
+--
+-- Indexes for table `truck`
+--
+ALTER TABLE `truck`
+  ADD PRIMARY KEY (`Number_Plate`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `package`
+--
+ALTER TABLE `package`
+  MODIFY `p_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `register`
+--
+ALTER TABLE `register`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+
+--
+-- AUTO_INCREMENT for table `review`
+--
+ALTER TABLE `review`
+  MODIFY `R_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `customer_details_b`
+--
+ALTER TABLE `customer_details_b`
+  ADD CONSTRAINT `customer_details_b_ibfk_1` FOREIGN KEY (`Number_plat`) REFERENCES `bus` (`Number_plat`);
+
+--
+-- Constraints for table `customer_details_c`
+--
+ALTER TABLE `customer_details_c`
+  ADD CONSTRAINT `customer_details_c_ibfk_1` FOREIGN KEY (`Number_PLate`) REFERENCES `car` (`Number_PLate`);
+
+--
+-- Constraints for table `customer_details_e`
+--
+ALTER TABLE `customer_details_e`
+  ADD CONSTRAINT `customer_details_e_ibfk_1` FOREIGN KEY (`Number_PLate`) REFERENCES `car` (`Number_PLate`),
+  ADD CONSTRAINT `customer_details_e_ibfk_2` FOREIGN KEY (`p_id`) REFERENCES `package` (`p_id`);
+
+--
+-- Constraints for table `customer_details_m`
+--
+ALTER TABLE `customer_details_m`
+  ADD CONSTRAINT `customer_details_m_ibfk_1` FOREIGN KEY (`Number_Plate`) REFERENCES `microbus` (`Number_Plate`);
+
+--
+-- Constraints for table `customer_details_t`
+--
+ALTER TABLE `customer_details_t`
+  ADD CONSTRAINT `customer_details_t_ibfk_1` FOREIGN KEY (`Number_Plate`) REFERENCES `truck` (`Number_Plate`);
+
+--
+-- Constraints for table `package`
+--
+ALTER TABLE `package`
+  ADD CONSTRAINT `package_ibfk_1` FOREIGN KEY (`Number_PLate`) REFERENCES `car` (`Number_PLate`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

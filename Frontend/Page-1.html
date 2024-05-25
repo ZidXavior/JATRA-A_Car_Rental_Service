@@ -1,0 +1,437 @@
+<?php 
+session_start();
+$email=$_SESSION['email'];
+$hostname='localhost';
+$username='root';
+$password='';
+$dbname='jatra';
+$con=mysqli_connect($hostname,$username,$password,$dbname);
+if($con)
+{
+	echo"";
+}
+else
+{
+	echo"conn false";
+} 
+?>
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Page 1</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+<link rel="stylesheet" href="Page-1.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 4.10.5, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dr+Sugiyama:400">
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "Site1",
+		"sameAs": []
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Page 1">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+  </head>
+  <body class="u-body u-overlap u-overlap-contrast u-overlap-transparent u-xl-mode"><header class="u-clearfix u-header u-header" id="sec-76fe"><div class="u-clearfix u-sheet u-sheet-1">
+        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+            <a class="u-button-style u-custom-active-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+              <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+              <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container">
+        
+            <ul class="u-nav u-spacing-20 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-active-grey-10 u-button-style u-nav-link u-text-hover-palette-2-base u-text-white" href="index.html" style="padding: 10px 0px;">Home</a>
+</li><li class="u-nav-item"><a class="u-active-grey-10 u-button-style u-nav-link u-text-hover-palette-2-base u-text-white" target="_blank" style="padding: 10px 0px;">Vehicle</a>
+<div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="a.php" data-page-id="169611520">SUV car</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="b.php" data-page-id="169611520">Micro Bus</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="c.php" data-page-id="169611520">Bus</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="d.php" data-page-id="169611520">Truck</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="e.php?" data-page-id="169611520">Package</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-active-grey-10 u-button-style u-nav-link u-text-hover-palette-2-base u-text-white" target="_blank" style="padding: 10px 0px;" href="user_request.php">Garage</a>
+  <div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-3"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="user_request.php?" target="_blank">Garage</a>
+</li></ul>
+</div>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-4"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" target="_blank">Vehicle</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-5"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="#">SUV car</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="#">Micro Bus</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="#">Bus</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="#">Truck</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" target="_blank">package</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-6"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="https://www.youtube.com/watch?v=DUwlGduupRI&amp;list=RDldWFpeu36K0&amp;index=7" target="_blank">AAAAAAA</a>
+</li></ul>
+</div>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+        <a href="user_edit.php?" class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-none u-text-custom-color-3 u-btn-1">Account Edit</a>
+        <a href="user_ratting.php?" class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-none u-text-custom-color-3 u-btn-2">Rating</a>
+        <a href="orderlist_of_car_user.php?" class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-none u-text-custom-color-3 u-btn-3">Order</a>
+        <a href="user_logout.php?" class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-none u-text-custom-color-3 u-btn-4">Logout</a>
+      </div></header>
+    <section class="u-align-center u-clearfix u-image u-shading u-section-1" src="" data-image-width="1600" data-image-height="1067" id="sec-99de">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-custom-font u-text u-text-default u-title u-text-1">JAT<span class="u-text-custom-color-3">RA</span>
+          <span style="font-size: 6rem;"></span>
+        </h1>
+        <p class="u-large-text u-text u-text-variant u-text-2"> Flexible travel options for your family and Your safty is our priority</p>
+      </div>
+    </section>
+    
+  
+    <section class="u-align-center u-clearfix u-palette-5-dark-3 u-section-3" id="carousel_d031">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-custom-font u-font-raleway u-text u-text-1"> WHAT WE OFFER</h1>
+        <p class="u-text u-text-2">To find the right model for you, first choose the car you're interested in. <br>Then select up to three models to review and easily compare their features.
+        </p>
+        <div class="u-expanded-width u-layout-horizontal u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-container-style u-list-item u-repeater-item u-white u-list-item-1">
+              <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-1">
+                <div class="u-align-left u-container-style u-expanded-width u-group u-palette-5-dark-2 u-group-1">
+                  <div class="u-container-layout u-valign-top u-container-layout-2">
+                    <h4 class="u-custom-font u-font-arial u-text u-text-3">SUV Car</h4>
+                  </div>
+                </div>
+                <img alt="" class="u-expanded-width u-image u-image-default u-image-1" src="images/Untitled-1.jpg">
+                <div class="u-container-style u-expanded-width u-group u-group-2" data-href="https://nicepage.com">
+                  <div class="u-container-layout u-valign-top u-container-layout-3">
+                    <p class="u-align-center u-text u-text-4">Starting at <b>$500</b>
+                    </p>
+                    <ul class="u-align-left u-custom-list u-hover-feature u-text u-text-5">
+                      <li>
+                        <div class="class u-list-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512.019 512.019" x="0px" y="0px" id="svg-b379"><path fill="currentColor" d="M362.676,0H149.343C119.888,0,96.01,23.878,96.01,53.333v448 c-0.011,5.891,4.757,10.675,10.648,10.686c2.84,0.005,5.565-1.123,7.571-3.134L256.01,367.083l141.781,141.781 c4.16,4.171,10.914,4.179,15.085,0.019c2.006-2.001,3.133-4.717,3.134-7.55v-448C416.01,23.878,392.131,0,362.676,0z"></path></svg>
+                        </div>4 Seats
+                      </li>
+                      <li>
+                        <div class="class u-list-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512.019 512.019" x="0px" y="0px" id="svg-b379"><path fill="currentColor" d="M362.676,0H149.343C119.888,0,96.01,23.878,96.01,53.333v448 c-0.011,5.891,4.757,10.675,10.648,10.686c2.84,0.005,5.565-1.123,7.571-3.134L256.01,367.083l141.781,141.781 c4.16,4.171,10.914,4.179,15.085,0.019c2.006-2.001,3.133-4.717,3.134-7.55v-448C416.01,23.878,392.131,0,362.676,0z"></path></svg>
+                        </div>AC service
+                      </li>
+                      <li>
+                        <div class="class u-list-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512.019 512.019" x="0px" y="0px" id="svg-b379"><path fill="currentColor" d="M362.676,0H149.343C119.888,0,96.01,23.878,96.01,53.333v448 c-0.011,5.891,4.757,10.675,10.648,10.686c2.84,0.005,5.565-1.123,7.571-3.134L256.01,367.083l141.781,141.781 c4.16,4.171,10.914,4.179,15.085,0.019c2.006-2.001,3.133-4.717,3.134-7.55v-448C416.01,23.878,392.131,0,362.676,0z"></path></svg>
+                        </div>
+                        <div class="class u-list-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512.019 512.019" x="0px" y="0px" id="svg-b379"><path fill="currentColor" d="M362.676,0H149.343C119.888,0,96.01,23.878,96.01,53.333v448 c-0.011,5.891,4.757,10.675,10.648,10.686c2.84,0.005,5.565-1.123,7.571-3.134L256.01,367.083l141.781,141.781 c4.16,4.171,10.914,4.179,15.085,0.019c2.006-2.001,3.133-4.717,3.134-7.55v-448C416.01,23.878,392.131,0,362.676,0z"></path></svg>
+                        </div>Auto Seat
+                      </li>
+                      <li>
+                        <div class="class u-list-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512.019 512.019" x="0px" y="0px" id="svg-b379"><path fill="currentColor" d="M362.676,0H149.343C119.888,0,96.01,23.878,96.01,53.333v448 c-0.011,5.891,4.757,10.675,10.648,10.686c2.84,0.005,5.565-1.123,7.571-3.134L256.01,367.083l141.781,141.781 c4.16,4.171,10.914,4.179,15.085,0.019c2.006-2.001,3.133-4.717,3.134-7.55v-448C416.01,23.878,392.131,0,362.676,0z"></path></svg>
+                        </div> Skilled Driver<br>
+                      </li>
+                    </ul>
+                    <a href="a.php?" class="u-btn u-btn-rectangle u-button-style u-palette-4-base u-btn-1">more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="u-container-style u-list-item u-repeater-item u-video-cover u-white u-list-item-2">
+              <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-4">
+                <div class="u-align-left u-container-style u-expanded-width u-group u-palette-5-dark-2 u-video-cover u-group-3">
+                  <div class="u-container-layout u-valign-top u-container-layout-5">
+                    <h4 class="u-custom-font u-font-arial u-text u-text-default u-text-6">Micro Bus</h4>
+                  </div>
+                </div>
+                <img alt="" class="u-expanded-width u-image u-image-default u-image-2" src="images/photos_toyota_hiace_2013_1_b.jpg" data-image-width="575" data-image-height="400">
+                <div class="u-container-style u-expanded-width u-group u-video-cover u-group-4" data-href="https://nicepage.com">
+                  <div class="u-container-layout u-valign-top u-container-layout-6">
+                    <p class="u-align-center u-text u-text-default u-text-7">Starting at <b>$700</b>
+                    </p>
+                    <ul class="u-align-left u-custom-list u-hover-feature u-text u-text-default u-text-8">
+                      <li>
+                        <div class="class u-list-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512.019 512.019" x="0px" y="0px" id="svg-0d13"><path fill="currentColor" d="M362.676,0H149.343C119.888,0,96.01,23.878,96.01,53.333v448 c-0.011,5.891,4.757,10.675,10.648,10.686c2.84,0.005,5.565-1.123,7.571-3.134L256.01,367.083l141.781,141.781 c4.16,4.171,10.914,4.179,15.085,0.019c2.006-2.001,3.133-4.717,3.134-7.55v-448C416.01,23.878,392.131,0,362.676,0z"></path></svg>
+                        </div> 10 Seats 
+                      </li>
+                      <li>
+                        <div class="class u-list-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512.019 512.019" x="0px" y="0px" id="svg-0d13"><path fill="currentColor" d="M362.676,0H149.343C119.888,0,96.01,23.878,96.01,53.333v448 c-0.011,5.891,4.757,10.675,10.648,10.686c2.84,0.005,5.565-1.123,7.571-3.134L256.01,367.083l141.781,141.781 c4.16,4.171,10.914,4.179,15.085,0.019c2.006-2.001,3.133-4.717,3.134-7.55v-448C416.01,23.878,392.131,0,362.676,0z"></path></svg>
+                        </div>
+                        <div class="class u-list-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512.019 512.019" x="0px" y="0px" id="svg-0d13"><path fill="currentColor" d="M362.676,0H149.343C119.888,0,96.01,23.878,96.01,53.333v448 c-0.011,5.891,4.757,10.675,10.648,10.686c2.84,0.005,5.565-1.123,7.571-3.134L256.01,367.083l141.781,141.781 c4.16,4.171,10.914,4.179,15.085,0.019c2.006-2.001,3.133-4.717,3.134-7.55v-448C416.01,23.878,392.131,0,362.676,0z"></path></svg>
+                        </div>
+                        <div class="class u-list-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512.019 512.019" x="0px" y="0px" id="svg-0d13"><path fill="currentColor" d="M362.676,0H149.343C119.888,0,96.01,23.878,96.01,53.333v448 c-0.011,5.891,4.757,10.675,10.648,10.686c2.84,0.005,5.565-1.123,7.571-3.134L256.01,367.083l141.781,141.781 c4.16,4.171,10.914,4.179,15.085,0.019c2.006-2.001,3.133-4.717,3.134-7.55v-448C416.01,23.878,392.131,0,362.676,0z"></path></svg>
+                        </div>AC/non AC service
+                      </li>
+                      <li>
+                        <div class="class u-list-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512.019 512.019" x="0px" y="0px" id="svg-0d13"><path fill="currentColor" d="M362.676,0H149.343C119.888,0,96.01,23.878,96.01,53.333v448 c-0.011,5.891,4.757,10.675,10.648,10.686c2.84,0.005,5.565-1.123,7.571-3.134L256.01,367.083l141.781,141.781 c4.16,4.171,10.914,4.179,15.085,0.019c2.006-2.001,3.133-4.717,3.134-7.55v-448C416.01,23.878,392.131,0,362.676,0z"></path></svg>
+                        </div>
+                        <div class="class u-list-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512.019 512.019" x="0px" y="0px" id="svg-0d13"><path fill="currentColor" d="M362.676,0H149.343C119.888,0,96.01,23.878,96.01,53.333v448 c-0.011,5.891,4.757,10.675,10.648,10.686c2.84,0.005,5.565-1.123,7.571-3.134L256.01,367.083l141.781,141.781 c4.16,4.171,10.914,4.179,15.085,0.019c2.006-2.001,3.133-4.717,3.134-7.55v-448C416.01,23.878,392.131,0,362.676,0z"></path></svg>
+                        </div>
+                        <div class="class u-list-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512.019 512.019" x="0px" y="0px" id="svg-0d13"><path fill="currentColor" d="M362.676,0H149.343C119.888,0,96.01,23.878,96.01,53.333v448 c-0.011,5.891,4.757,10.675,10.648,10.686c2.84,0.005,5.565-1.123,7.571-3.134L256.01,367.083l141.781,141.781 c4.16,4.171,10.914,4.179,15.085,0.019c2.006-2.001,3.133-4.717,3.134-7.55v-448C416.01,23.878,392.131,0,362.676,0z"></path></svg>
+                        </div>Auto Seat
+                      </li>
+                      <li>
+                        <div class="class u-list-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512.019 512.019" x="0px" y="0px" id="svg-0d13"><path fill="currentColor" d="M362.676,0H149.343C119.888,0,96.01,23.878,96.01,53.333v448 c-0.011,5.891,4.757,10.675,10.648,10.686c2.84,0.005,5.565-1.123,7.571-3.134L256.01,367.083l141.781,141.781 c4.16,4.171,10.914,4.179,15.085,0.019c2.006-2.001,3.133-4.717,3.134-7.55v-448C416.01,23.878,392.131,0,362.676,0z"></path></svg>
+                        </div>
+                        <div class="class u-list-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512.019 512.019" x="0px" y="0px" id="svg-0d13"><path fill="currentColor" d="M362.676,0H149.343C119.888,0,96.01,23.878,96.01,53.333v448 c-0.011,5.891,4.757,10.675,10.648,10.686c2.84,0.005,5.565-1.123,7.571-3.134L256.01,367.083l141.781,141.781 c4.16,4.171,10.914,4.179,15.085,0.019c2.006-2.001,3.133-4.717,3.134-7.55v-448C416.01,23.878,392.131,0,362.676,0z"></path></svg>
+                        </div>
+                        <div class="class u-list-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512.019 512.019" x="0px" y="0px" id="svg-0d13"><path fill="currentColor" d="M362.676,0H149.343C119.888,0,96.01,23.878,96.01,53.333v448 c-0.011,5.891,4.757,10.675,10.648,10.686c2.84,0.005,5.565-1.123,7.571-3.134L256.01,367.083l141.781,141.781 c4.16,4.171,10.914,4.179,15.085,0.019c2.006-2.001,3.133-4.717,3.134-7.55v-448C416.01,23.878,392.131,0,362.676,0z"></path></svg>
+                        </div>Skilled Driver
+                      </li>
+                    </ul>
+                    <a href="b.php?" class="u-btn u-btn-rectangle u-button-style u-palette-4-base u-btn-2">more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="u-container-style u-list-item u-repeater-item u-video-cover u-white u-list-item-3">
+              <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-7">
+                <div class="u-align-left u-container-style u-expanded-width u-group u-palette-5-dark-2 u-video-cover u-group-5">
+                  <div class="u-container-layout u-valign-top u-container-layout-8">
+                    <h4 class="u-custom-font u-font-arial u-text u-text-default u-text-9">Bus</h4>
+                  </div>
+                </div>
+                <img alt="" class="u-expanded-width u-image u-image-default u-image-3" src="images/neoplan15535.jpg" data-image-width="1928" data-image-height="952">
+                <div class="u-container-style u-expanded-width u-group u-video-cover u-group-6" data-href="https://nicepage.com">
+                  <div class="u-container-layout u-valign-top u-container-layout-9">
+                    <p class="u-align-center u-text u-text-default u-text-10">Starting at <b>$1000</b>
+                    </p>
+                    <ul class="u-align-left u-custom-list u-hover-feature u-text u-text-default u-text-11">
+                      <li>
+                        <div class="class u-list-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512.019 512.019" x="0px" y="0px" id="svg-6c62"><path fill="currentColor" d="M362.676,0H149.343C119.888,0,96.01,23.878,96.01,53.333v448 c-0.011,5.891,4.757,10.675,10.648,10.686c2.84,0.005,5.565-1.123,7.571-3.134L256.01,367.083l141.781,141.781 c4.16,4.171,10.914,4.179,15.085,0.019c2.006-2.001,3.133-4.717,3.134-7.55v-448C416.01,23.878,392.131,0,362.676,0z"></path></svg>
+                        </div>25 Seats
+                      </li>
+                      <li>
+                        <div class="class u-list-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512.019 512.019" x="0px" y="0px" id="svg-6c62"><path fill="currentColor" d="M362.676,0H149.343C119.888,0,96.01,23.878,96.01,53.333v448 c-0.011,5.891,4.757,10.675,10.648,10.686c2.84,0.005,5.565-1.123,7.571-3.134L256.01,367.083l141.781,141.781 c4.16,4.171,10.914,4.179,15.085,0.019c2.006-2.001,3.133-4.717,3.134-7.55v-448C416.01,23.878,392.131,0,362.676,0z"></path></svg>
+                        </div>AC/non AC service
+                      </li>
+                      <li>
+                        <div class="class u-list-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512.019 512.019" x="0px" y="0px" id="svg-6c62"><path fill="currentColor" d="M362.676,0H149.343C119.888,0,96.01,23.878,96.01,53.333v448 c-0.011,5.891,4.757,10.675,10.648,10.686c2.84,0.005,5.565-1.123,7.571-3.134L256.01,367.083l141.781,141.781 c4.16,4.171,10.914,4.179,15.085,0.019c2.006-2.001,3.133-4.717,3.134-7.55v-448C416.01,23.878,392.131,0,362.676,0z"></path></svg>
+                        </div>Auto Seat
+                      </li>
+                      <li>
+                        <div class="class u-list-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512.019 512.019" x="0px" y="0px" id="svg-6c62"><path fill="currentColor" d="M362.676,0H149.343C119.888,0,96.01,23.878,96.01,53.333v448 c-0.011,5.891,4.757,10.675,10.648,10.686c2.84,0.005,5.565-1.123,7.571-3.134L256.01,367.083l141.781,141.781 c4.16,4.171,10.914,4.179,15.085,0.019c2.006-2.001,3.133-4.717,3.134-7.55v-448C416.01,23.878,392.131,0,362.676,0z"></path></svg>
+                        </div>skilled Driver
+                      </li>
+                    </ul>
+                    <a href="c.php?" class="u-btn u-btn-rectangle u-button-style u-palette-4-base u-btn-3">more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="u-container-style u-list-item u-repeater-item u-video-cover u-white u-list-item-4">
+              <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-10">
+                <div class="u-align-left u-container-style u-expanded-width u-group u-palette-5-dark-2 u-video-cover u-group-7">
+                  <div class="u-container-layout u-valign-top u-container-layout-11">
+                    <h4 class="u-custom-font u-font-arial u-text u-text-default u-text-12">Truck</h4>
+                  </div>
+                </div>
+                <img alt="" class="u-expanded-width u-image u-image-default u-image-4" src="images/images3.jpg" data-image-width="268" data-image-height="188">
+                <div class="u-container-style u-expanded-width u-group u-video-cover u-group-8" data-href="https://nicepage.com">
+                  <div class="u-container-layout u-valign-top u-container-layout-12">
+                    <p class="u-align-center u-text u-text-default u-text-13">Starting at <b>$1000</b>
+                    </p>
+                    <ul class="u-align-left u-custom-list u-hover-feature u-text u-text-default u-text-14">
+                      <li>
+                        <div class="class u-list-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512.019 512.019" x="0px" y="0px" id="svg-6c62"><path fill="currentColor" d="M362.676,0H149.343C119.888,0,96.01,23.878,96.01,53.333v448 c-0.011,5.891,4.757,10.675,10.648,10.686c2.84,0.005,5.565-1.123,7.571-3.134L256.01,367.083l141.781,141.781 c4.16,4.171,10.914,4.179,15.085,0.019c2.006-2.001,3.133-4.717,3.134-7.55v-448C416.01,23.878,392.131,0,362.676,0z"></path></svg>
+                        </div>5 tons
+                      </li>
+                      <li>
+                        <div class="class u-list-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512.019 512.019" x="0px" y="0px" id="svg-6c62"><path fill="currentColor" d="M362.676,0H149.343C119.888,0,96.01,23.878,96.01,53.333v448 c-0.011,5.891,4.757,10.675,10.648,10.686c2.84,0.005,5.565-1.123,7.571-3.134L256.01,367.083l141.781,141.781 c4.16,4.171,10.914,4.179,15.085,0.019c2.006-2.001,3.133-4.717,3.134-7.55v-448C416.01,23.878,392.131,0,362.676,0z"></path></svg>
+                        </div>Big Space
+                      </li>
+                      <li>
+                        <div class="class u-list-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512.019 512.019" x="0px" y="0px" id="svg-6c62"><path fill="currentColor" d="M362.676,0H149.343C119.888,0,96.01,23.878,96.01,53.333v448 c-0.011,5.891,4.757,10.675,10.648,10.686c2.84,0.005,5.565-1.123,7.571-3.134L256.01,367.083l141.781,141.781 c4.16,4.171,10.914,4.179,15.085,0.019c2.006-2.001,3.133-4.717,3.134-7.55v-448C416.01,23.878,392.131,0,362.676,0z"></path></svg>
+                        </div>Rain Proof
+                      </li>
+                      <li>
+                        <div class="class u-list-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 512.019 512.019" x="0px" y="0px" id="svg-6c62"><path fill="currentColor" d="M362.676,0H149.343C119.888,0,96.01,23.878,96.01,53.333v448 c-0.011,5.891,4.757,10.675,10.648,10.686c2.84,0.005,5.565-1.123,7.571-3.134L256.01,367.083l141.781,141.781 c4.16,4.171,10.914,4.179,15.085,0.019c2.006-2.001,3.133-4.717,3.134-7.55v-448C416.01,23.878,392.131,0,362.676,0z"></path></svg>
+                        </div>Skilled Driver
+                      </li>
+                    </ul>
+                    <a href="d.php?" class="u-btn u-btn-rectangle u-button-style u-palette-4-base u-btn-4">more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="u-absolute-vcenter u-custom-color-2 u-gallery-nav u-gallery-nav-prev u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-gallery-nav-1" href="#" role="button">
+            <span aria-hidden="true">
+              <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
+            </span>
+            <span class="sr-only">
+              <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
+            </span>
+          </a>
+          <a class="u-absolute-vcenter u-custom-color-2 u-gallery-nav u-gallery-nav-next u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-gallery-nav-2" href="#" role="button">
+            <span aria-hidden="true">
+              <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
+            </span>
+            <span class="sr-only">
+              <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+      
+      
+      
+      
+    </section>
+    <footer class="u-align-center-sm u-align-center-xs u-clearfix u-footer u-grey-80" id="sec-437d"><div class="u-clearfix u-sheet u-valign-middle-sm u-valign-middle-xs u-sheet-1">
+        <h3 class="u-text u-text-default u-text-1">JAT<span class="u-text-custom-color-3">RA</span>
+        </h3>
+        <div class="u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
+          <div class="u-gutter-0 u-layout">
+            <div class="u-layout-row">
+              <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-15 u-layout-cell-1">
+                <div class="u-container-layout u-valign-middle u-container-layout-1"><!--position-->
+                  <div data-position="" class="u-position u-position-1"><!--block-->
+                    <div class="u-block">
+                      <div class="u-block-container u-clearfix"><!--block_header-->
+                        <h5 class="u-block-header u-text"><!--block_header_content--> Policies / Sitemap<!--/block_header_content--></h5><!--/block_header--><!--block_content-->
+                        <div class="u-block-content u-text"><!--block_content_content-->
+                          <a href="https://privacy.ehi.com/en-us/home.html" class="external link--external title-list-nav__link u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" rel="noopener noreferrer" target="_blank">Privacy Policy</a>
+                          <br>
+                          <a href="https://privacy.ehi.com/en-us/home/cookie-policy.html" class="external link--external title-list-nav__link u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2" rel="noopener noreferrer" target="_blank">Cookie Policy</a>
+                          <br>
+                          <a href="https://www.alamo.com/en/terms-of-use.html" class="internal title-list-nav__link u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-3">Terms of Use</a>
+                          <br>
+                          <a href="https://www.alamo.com/en/customer-support/sitemap.html" class="internal title-list-nav__link u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-4">Sitemap</a>
+                          <br>
+                          <a href="https://www.alamo.com/en/rental-cars/us/cars.html#one_trust" class="external link--external title-list-nav__link u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-5" rel="noopener noreferrer">Cookie Settings / AdChoices</a><!--/block_content_content-->
+                        </div><!--/block_content-->
+                      </div>
+                    </div><!--/block-->
+                  </div><!--/position-->
+                </div>
+              </div>
+              <div class="u-align-left u-container-style u-layout-cell u-size-15 u-layout-cell-2">
+                <div class="u-container-layout u-valign-top u-container-layout-2"><!--position-->
+                  <div data-position="" class="u-position"><!--block-->
+                    <div class="u-block">
+                      <div class="u-block-container u-clearfix"><!--block_header-->
+                        <h5 class="u-block-header u-text"><!--block_header_content-->Information<!--/block_header_content--></h5><!--/block_header--><!--block_content-->
+                        <div class="u-block-content u-text"><!--block_content_content-->
+                          <a href="https://technext.github.io/carbook/index.html#" class="d-block py-2 u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-6">About</a>
+                          <br>
+                          <a href="https://technext.github.io/carbook/index.html#" class="d-block py-2 u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-7">Services</a>
+                          <br>
+                          <a href="https://technext.github.io/carbook/index.html#" class="d-block py-2 u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-8">Term and Conditions</a>
+                          <br>
+                          <a href="https://technext.github.io/carbook/index.html#" class="d-block py-2 u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-9">Best Price Guarantee</a>
+                          <br>
+                          <a href="https://technext.github.io/carbook/index.html#" class="d-block py-2 u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-10">Privacy &amp; Cookies Policy</a><!--/block_content_content-->
+                        </div><!--/block_content-->
+                      </div>
+                    </div><!--/block-->
+                  </div><!--/position-->
+                </div>
+              </div>
+              <div class="u-align-left u-container-style u-layout-cell u-size-15 u-layout-cell-3">
+                <div class="u-container-layout u-valign-top u-container-layout-3"><!--position-->
+                  <div data-position="" class="u-position u-position-3"><!--block-->
+                    <div class="u-block">
+                      <div class="u-block-container u-clearfix"><!--block_header-->
+                        <h5 class="u-block-header u-text"><!--block_header_content--> Customer Support <!--/block_header_content--></h5><!--/block_header--><!--block_content-->
+                        <div class="u-block-content u-text"><!--block_content_content-->
+                          <a href="https://technext.github.io/carbook/index.html#" class="d-block py-2 u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-11">FAQ</a>
+                          <br>
+                          <a href="https://technext.github.io/carbook/index.html#" class="d-block py-2 u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-12">Payment Option</a>
+                          <br>
+                          <a href="https://technext.github.io/carbook/index.html#" class="d-block py-2 u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-13">Booking Tips</a>
+                          <br>
+                          <a href="https://technext.github.io/carbook/index.html#" class="d-block py-2 u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-14">How it works</a>
+                          <br>
+                          <a href="https://technext.github.io/carbook/index.html#" class="d-block py-2 u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-15">Contact Us</a><!--/block_content_content-->
+                        </div><!--/block_content-->
+                      </div>
+                    </div><!--/block-->
+                  </div><!--/position-->
+                </div>
+              </div>
+              <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-15 u-layout-cell-4">
+                <div class="u-container-layout u-valign-middle u-container-layout-4"><!--position-->
+                  <div data-position="" class="u-position u-position-4"><!--block-->
+                    <div class="u-block">
+                      <div class="u-block-container u-clearfix"><!--block_header-->
+                        <h5 class="u-block-header u-text"><!--block_header_content--> Have a Questions? <!--/block_header_content--></h5><!--/block_header--><!--block_content-->
+                        <div class="u-block-content u-text"><!--block_content_content-->
+                          <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-16" href="#">
+                            <br>20/A,BijoySorony,Dhaka:1216<br>Bangladesh<br>+2 392 3929 210<br>info@yourdomain.com
+                          </a><!--/block_content_content-->
+                        </div><!--/block_content-->
+                      </div>
+                    </div><!--/block-->
+                  </div><!--/position-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="u-social-icons u-spacing-20 u-social-icons-1">
+          <a class="u-social-url" title="facebook" target="_blank" href=""><span class="u-icon u-social-facebook u-social-icon u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-5588"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-5588"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M73.5,31.6h-9.1c-1.4,0-3.6,0.8-3.6,3.9v8.5h12.6L72,58.3H60.8v40.8H43.9V58.3h-8V43.9h8v-9.2
+            c0-6.7,3.1-17,17-17h12.5v13.9H73.5z"></path></svg></span>
+          </a>
+          <a class="u-social-url" title="twitter" target="_blank" href=""><span class="u-icon u-social-icon u-social-twitter u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-0f82"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-0f82"><circle fill="currentColor" class="st0" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M83.8,47.3c0,0.6,0,1.2,0,1.7c0,17.7-13.5,38.2-38.2,38.2C38,87.2,31,85,25,81.2c1,0.1,2.1,0.2,3.2,0.2
+            c6.3,0,12.1-2.1,16.7-5.7c-5.9-0.1-10.8-4-12.5-9.3c0.8,0.2,1.7,0.2,2.5,0.2c1.2,0,2.4-0.2,3.5-0.5c-6.1-1.2-10.8-6.7-10.8-13.1
+            c0-0.1,0-0.1,0-0.2c1.8,1,3.9,1.6,6.1,1.7c-3.6-2.4-6-6.5-6-11.2c0-2.5,0.7-4.8,1.8-6.7c6.6,8.1,16.5,13.5,27.6,14
+            c-0.2-1-0.3-2-0.3-3.1c0-7.4,6-13.4,13.4-13.4c3.9,0,7.3,1.6,9.8,4.2c3.1-0.6,5.9-1.7,8.5-3.3c-1,3.1-3.1,5.8-5.9,7.4
+            c2.7-0.3,5.3-1,7.7-2.1C88.7,43,86.4,45.4,83.8,47.3z"></path></svg></span>
+          </a>
+          <a class="u-social-url" title="instagram" target="_blank" href=""><span class="u-icon u-social-icon u-social-instagram u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-b62f"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-b62f"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M55.9,38.2c-9.9,0-17.9,8-17.9,17.9C38,66,46,74,55.9,74c9.9,0,17.9-8,17.9-17.9C73.8,46.2,65.8,38.2,55.9,38.2
+            z M55.9,66.4c-5.7,0-10.3-4.6-10.3-10.3c-0.1-5.7,4.6-10.3,10.3-10.3c5.7,0,10.3,4.6,10.3,10.3C66.2,61.8,61.6,66.4,55.9,66.4z"></path><path fill="#FFFFFF" d="M74.3,33.5c-2.3,0-4.2,1.9-4.2,4.2s1.9,4.2,4.2,4.2s4.2-1.9,4.2-4.2S76.6,33.5,74.3,33.5z"></path><path fill="#FFFFFF" d="M73.1,21.3H38.6c-9.7,0-17.5,7.9-17.5,17.5v34.5c0,9.7,7.9,17.6,17.5,17.6h34.5c9.7,0,17.5-7.9,17.5-17.5V38.8
+            C90.6,29.1,82.7,21.3,73.1,21.3z M83,73.3c0,5.5-4.5,9.9-9.9,9.9H38.6c-5.5,0-9.9-4.5-9.9-9.9V38.8c0-5.5,4.5-9.9,9.9-9.9h34.5
+            c5.5,0,9.9,4.5,9.9,9.9V73.3z"></path></svg></span>
+          </a>
+          <a class="u-social-url" title="linkedin" target="_blank" href=""><span class="u-icon u-social-icon u-social-linkedin u-icon-4"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-631f"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-631f"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M41.3,83.7H27.9V43.4h13.4V83.7z M34.6,37.9L34.6,37.9c-4.6,0-7.5-3.1-7.5-7c0-4,3-7,7.6-7s7.4,3,7.5,7
+            C42.2,34.8,39.2,37.9,34.6,37.9z M89.6,83.7H76.2V62.2c0-5.4-1.9-9.1-6.8-9.1c-3.7,0-5.9,2.5-6.9,4.9c-0.4,0.9-0.4,2.1-0.4,3.3v22.5
+            H48.7c0,0,0.2-36.5,0-40.3h13.4v5.7c1.8-2.7,5-6.7,12.1-6.7c8.8,0,15.4,5.8,15.4,18.1V83.7z"></path></svg></span>
+          </a>
+        </div>
+      </div></footer>
+  </body>
+</html>

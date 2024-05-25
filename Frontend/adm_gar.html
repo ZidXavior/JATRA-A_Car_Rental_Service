@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Admin Panel</title>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Garage Requests</h2>
+
+        <?php
+        // Connect to your database
+        $servername = "your_servername";
+        $username = "your_username";
+        $password = "your_password";
+        $dbname = "your_dbname";
+
+        $conn = new mysqli($servername, $username, $password, $dbname);
+
+        // Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        // Fetch pending requests
+        $sql = "SELECT * FROM garage_requests WHERE status = 'pending'";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            echo "<ul>";
+            while ($row = $result->fetch_assoc()) {
+                echo "<li>";
+                echo "Username: " . $row['username'] . " | Vehicle ID: " . $row['vehicle_id'];
+                echo " | <a href='approve_request.php?id=" . $row['id'] . "'>Approve</a>";
+                echo " | <a href='reject_request.php?id=" . $row['id'] . "'>Reject</a>";
+                echo "</li>";
+            }
+            echo "</ul>";
+        } else {
+            echo "No pending requests.";
+        }
+
+        $conn->close();
+        ?>
+
+    </div>
+
+</body>
+</html>
